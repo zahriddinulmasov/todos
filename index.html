@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="shortcut icon"
+      href="https://iconarchive.com/download/i99584/blackvariant/button-ui-requests-5/ToDo-List.ico"
+    />
+    <link
+      href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"
+      rel="stylesheet"
+      integrity="sha384-Zenh87qX5JnK2Jl0vWa8Ck2rdkQ2Bzep5IDxbcnCeuOxjzrPF/et3URy9Bv1WTRi"
+      crossorigin="anonymous"
+    />
+    <title>todos</title>
+  </head>
+  <style>
+    input::placeholder{
+      color: black !important;
+    }
+  </style>
+  <body class="bg-info bg-opacity-50">
+    <h1 class="m-0 pt-4 pb-3 bg-info bg-opacity-100 text-center fw-bolder position-sticky end-0 start-0 top-0" style="z-index: 2;">Todos list</h1>
+    <div class="d-flex justify-content-center">
+      <div class="py-4 px-3 bg-light" style="max-width: 360px;">
+        <form class="form d-flex mb-3">
+          <input
+            class="form__input me-2 form-control bg-info bg-opacity-50"
+            type="text"
+            placeholder="Type..."
+            required
+          />
+
+          <button class="btn btn-info">Add</button>
+        </form>
+
+        <div class="buttons">
+          <button class="all btn btn-primary">all <span class="all__count">0</span></button>
+          <button class="completed btn btn-info">
+            completed <span class="completed__count">0</span>
+          </button>
+          <button class="uncompleted btn btn-danger">
+            uncompleted <span class="uncompleted__count">0</span>
+          </button>
+        </div>
+        <ul class="todo__list p-0 py-3"></ul>
+      </div>
+    </div>
+
+    <script src="./js/index.js"></script>
+  </body>
+</html>
